@@ -3,12 +3,4 @@
 
 *						@marv7000
 .github/*				@ByteOtter
-
-# Kernel subsystems
-kernel/drv/pci/			@marv7000
-kernel/drv/spi/			@mtravitzky
-kernel/drv/usb/			@marv7000
-kernel/drv/misc/		@marv7000
-
-# File systems
-kernel/fs/initfs/		@marv7000
+echo/					@ByteOtter
