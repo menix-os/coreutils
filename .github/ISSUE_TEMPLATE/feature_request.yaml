@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Menix-OS Team <info@menix-os.org>
+# SPDX-License-Identifier: LGPL-2.1-only
 ---
 name: Feature Request
 description: Suggest a new feature to Menix
@@ -39,7 +41,7 @@ body:
             - x86_64
             - aarch64/arm64
             - riscv64
-            - N/A 
+            - N/A
             - New Architecture
     - type: dropdown
       attributes:

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Menix-OS Team <info@menix-os.org>
+# SPDX-License-Identifier: LGPL-2.1-only
 ---
 name: Bug report
 description: Report a bug
@@ -30,7 +32,7 @@ body:
     - type: dropdown
       attributes:
             label: Affected Area
-            description: > 
+            description: >
                 What sub system of Menix does this issue affect?
             options:
                 - Boot

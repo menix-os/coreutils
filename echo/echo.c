@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: Menix-OS Team <info@menix-os.org>
+// SPDX-License-Identifier: LGPL-2.1-only
+//? echo utility for menix.
+
 /*
  * echo.c - Print given input to the command line.
  *

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Menix-OS Team <info@menix-os.org>
+# SPDX-License-Identifier: LGPL-2.1-only
+
 # This file contains all Codeowners. The owners of the specified
 # files will be automatically requested for review when a PR is opened.
 

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Menix-OS Team <info@menix-os.org>
+# SPDX-License-Identifier: LGPL-2.1-only
 cmake_minimum_required(VERSION 3.25)
 
 project(apps)
