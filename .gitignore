@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# build directories
+build/
+
+# Local configuration
+.editorconfig
+.idea/
+.vscode/
+
+# Temporary files
+.cache/
