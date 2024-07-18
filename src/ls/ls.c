@@ -8,11 +8,33 @@
 #include <stdlib.h>
 #include <string.h>
 
+void list_dir(const char* path);
+
+int main(int argc, char* argv[])
+{
+	const char *path;
+
+	if (argc > 2)
+	{
+		fprintf(stderr, "Usage: %s [directory]\n", argv[0]);
+		return EXIT_FAILURE;
+	} else if (argc ==1) {
+		path = ".";
+	} else
+	{
+		path = argv[1];
+	}
+
+	list_dir(path);
+
+	return EXIT_SUCCESS;
+}
+
 // List contents of a given path recursively.
-void list_dir(const char *path)
+void list_dir(const char* path)
 {
 	DIR *dir;
-	struct dirent *entry;
+	struct dirent* entry;
 
 	dir = opendir(path);
 	if (dir == NULL)
@@ -36,24 +58,4 @@ void list_dir(const char *path)
 	{
 		perror("error: failure to close dirstream.");
 	}
-}
-
-int main(int argc, char *argv[])
-{
-	const char *path;
-
-	if (argc > 2)
-	{
-		fprintf(stderr, "Usage: %s [directory]\n", argv[0]);
-		return EXIT_FAILURE;
-	} else if (argc ==1) {
-		path = ".";
-	} else
-	{
-		path = argv[1];
-	}
-
-	list_dir(path);
-
-	return EXIT_SUCCESS;
 }
