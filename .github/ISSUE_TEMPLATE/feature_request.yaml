@@ -4,7 +4,7 @@
 name: Feature Request
 description: Suggest a new feature to Menix
 title: "[Feature]"
-labels: ["enhancement"]
+labels: ["enhancement", "pending"]
 body:
     - type: markdown
       attributes:
@@ -23,11 +23,8 @@ body:
       attributes:
         label: Feature type
         options:
-            - New CPU architecture support
-            - Expanding driver support
-            - File System support
-            - Change existing functionality
-            - Change to the build system
+            - New coreutil
+            - Change of behaviour of existing util
             - Other
       validations:
         required: true
@@ -45,9 +42,9 @@ body:
             - New Architecture
     - type: dropdown
       attributes:
-        label: Affected Area
+        label: Type of util
         description: >
-            What sub system of Menix does you proposal affect?
+            What area of Menix will this util touch?
         options:
             - Boot
             - Drivers
