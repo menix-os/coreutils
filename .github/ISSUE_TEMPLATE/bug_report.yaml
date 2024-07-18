@@ -31,18 +31,23 @@ body:
             placeholder: master
     - type: dropdown
       attributes:
-            label: Affected Area
+            label: Affected Application
             description: >
-                What sub system of Menix does this issue affect?
+                What util or application did this bug affect?
             options:
-                - Boot
-                - Drivers
-                - File System
-                - Main
-                - Build System
-                - Other
+                - ls
+                - echo
+                - cat
+                - N/A
+                - Multiple
       validations:
         required: true
+    - type: input
+      attributes:
+            label: Application version
+            description: >
+                Which version of the application did you use?
+            placeholder: master
     - type: textarea
       attributes:
             label: Bug Description
