@@ -12,15 +12,18 @@ void list_dir(const char* path);
 
 int main(int argc, char* argv[])
 {
-	const char *path;
+	const char* path;
 
 	if (argc > 2)
 	{
 		fprintf(stderr, "Usage: %s [directory]\n", argv[0]);
 		return EXIT_FAILURE;
-	} else if (argc ==1) {
+	}
+	else if (argc == 1)
+	{
 		path = ".";
-	} else
+	}
+	else
 	{
 		path = argv[1];
 	}
@@ -33,7 +36,7 @@ int main(int argc, char* argv[])
 // List contents of a given path recursively.
 void list_dir(const char* path)
 {
-	DIR *dir;
+	DIR* dir;
 	struct dirent* entry;
 
 	dir = opendir(path);
