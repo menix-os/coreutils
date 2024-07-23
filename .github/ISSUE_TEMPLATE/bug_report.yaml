@@ -17,11 +17,12 @@ body:
             label: Architecture
             description: >
                 Which CPU architecture does this bug affect?
+            multiple: true
             options:
                 - x86_64
                 - aarch64/arm64
                 - riscv64
-                - None/Multiple
+                - None
       validations:
         required: true
     - type: input
@@ -34,12 +35,12 @@ body:
             label: Affected Application
             description: >
                 What util or application did this bug affect?
+            multiple: true
             options:
                 - ls
                 - echo
                 - cat
                 - N/A
-                - Multiple
       validations:
         required: true
     - type: input
