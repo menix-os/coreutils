@@ -28,7 +28,7 @@ typedef enum
 
 int main(int argc, const char** argv)
 {
-	flags	flg = TRAILING_NEWLINE;
+	flags flg = TRAILING_NEWLINE;
 	ssize_t ret = 0;
 
 	const char** arg_start = argv;
@@ -51,8 +51,7 @@ int main(int argc, const char** argv)
 					argv++;
 					argc--;
 					break;
-				default:
-					break;	  // Invalid flags get treated as text.
+				default: break;	   // Invalid flags get treated as text.
 			}
 		}
 	}
@@ -74,9 +73,8 @@ int main(int argc, const char** argv)
 						case 'b':
 							write(1, "\b", 1);
 							j++;
-							break;	  // Write backspace.
-						case 'c':
-							break;	  // Suppress teh newline that follows the last arg.
+							break;			// Write backspace.
+						case 'c': break;	// Suppress teh newline that follows the last arg.
 						case 'f':
 							write(1, "\f", 1);
 							j++;
@@ -101,8 +99,7 @@ int main(int argc, const char** argv)
 							write(1, "\\", 1);
 							j++;
 							break;
-						default:
-							break;
+						default: break;
 					}
 				}
 				else

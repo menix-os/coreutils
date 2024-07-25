@@ -16,21 +16,20 @@ int main(int argc, char* argv[])
 
 	if (argc == 1)
 	{
-	usage:
-		fprintf(stderr, "Usage: %s [-u] <FILE>\n\ncat - Read FILE to standard output.\n\nOptions:\n-h - Print this help text.\n-u - Print each byte without delay as soon as it is read.\n\n", argv[0]);
+usage:
+		fprintf(
+			stderr,
+			"Usage: %s [-u] <FILE>\n\ncat - Read FILE to standard output.\n\nOptions:\n-h - Print this help text.\n-u - Print each byte without delay as soon as it is read.\n\n",
+			argv[0]);
 		return EXIT_FAILURE;
 	}
-	while((opt = getopt(argc, argv, "u")) != -1)
+	while ((opt = getopt(argc, argv, "u")) != -1)
 	{
-		switch(opt)
+		switch (opt)
 		{
-			case 'u':
-				strm = 1;
-				break;
-			case 'h':
-				goto usage;
-			default:
-				goto usage;
+			case 'u': strm = 1; break;
+			case 'h': goto usage;
+			default: goto usage;
 		}
 	}
 
@@ -38,14 +37,15 @@ int main(int argc, char* argv[])
 	{
 		fprintf(stderr, "Invalid number of arguments.\n");
 		return EXIT_FAILURE;
-	} 
-	
+	}
+
 	for (int i = optind; i < argc; ++i)
 	{
 		if (strm)
 		{
 			cat_stream(argv[i]);
-		} else
+		}
+		else
 		{
 			cat_buffd(argv[i]);
 		}
@@ -54,9 +54,9 @@ int main(int argc, char* argv[])
 }
 
 //! Read a given file and print each byte to stdout as it is read.
-void cat_stream(const char *filename)
+void cat_stream(const char* filename)
 {
-	FILE *file = fopen(filename, "r");
+	FILE* file = fopen(filename, "r");
 	if (!file)
 	{
 		perror("error: failed to open file!");
@@ -73,9 +73,9 @@ void cat_stream(const char *filename)
 }
 
 //! Read file into 4K sized buffers and print them to stdout.
-void cat_buffd(const char *filename)
+void cat_buffd(const char* filename)
 {
-	FILE *file = fopen(filename, "r");
+	FILE* file = fopen(filename, "r");
 	if (!file)
 	{
 		perror("error: failed to open file.");
@@ -83,7 +83,7 @@ void cat_buffd(const char *filename)
 	}
 
 	const size_t BUFF_SIZE = 4096;
-	char *buff = malloc(BUFF_SIZE);
+	char* buff = malloc(BUFF_SIZE);
 	if (!buff)
 	{
 		perror("error: failed to allocate read buffer memory!");
